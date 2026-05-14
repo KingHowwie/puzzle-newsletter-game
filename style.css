@@ -1,0 +1,339 @@
+/* === Reset & Base === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0a0a0a;
+  --white: #fafafa;
+  --gray-100: #f3f3f3;
+  --gray-200: #e5e5e5;
+  --gray-400: #a0a0a0;
+  --gray-600: #555;
+  --accent: #1a1a1a;
+  --success: #18a059;
+  --wrong-bg: #fff1f0;
+  --wrong-border: #ffa39e;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius: 10px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--black);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 640px;
+  padding: 0 20px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Header === */
+header {
+  padding: 28px 0 32px;
+  text-align: center;
+}
+
+.wordmark {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+}
+
+/* === State management === */
+.state { display: none; }
+.state.active { display: block; }
+
+/* === Loading === */
+.loading-text {
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 15px;
+  padding: 60px 0;
+}
+
+/* === Error === */
+.error-message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 40px;
+}
+
+.error-sub {
+  text-align: center;
+  color: var(--gray-600);
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* === Puzzle === */
+.puzzle-meta {
+  margin-bottom: 12px;
+}
+
+.type-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+.puzzle-title {
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.flavor-text {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.puzzle-question {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  white-space: pre-wrap;
+}
+
+/* === Answer area === */
+.answer-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.answer-input {
+  flex: 1;
+  height: 50px;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 0 16px;
+  font-size: 16px;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.answer-input:focus {
+  border-color: var(--black);
+}
+
+.answer-input.shake {
+  animation: shake 0.35s ease;
+  border-color: var(--wrong-border);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.submit-btn {
+  height: 50px;
+  padding: 0 22px;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.submit-btn:hover { opacity: 0.85; }
+.submit-btn:active { opacity: 0.7; }
+
+/* === Wrong feedback === */
+.wrong-feedback {
+  font-size: 14px;
+  color: #c0392b;
+  margin-bottom: 10px;
+  min-height: 20px;
+}
+
+/* === Hints === */
+.hint-area {
+  margin-top: 8px;
+}
+
+.hint-btn {
+  background: none;
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: var(--gray-600);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.hint-btn:hover {
+  border-color: var(--gray-400);
+  color: var(--black);
+}
+
+.hint-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.hint-display {
+  margin-top: 12px;
+  background: var(--gray-100);
+  border-left: 3px solid var(--gray-200);
+  padding: 12px 14px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.hint-count {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* === Success state === */
+#state-success {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--success);
+  color: white;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 64px;
+  margin: 0 auto 16px;
+}
+
+.success-label {
+  font-size: 15px;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+
+.answer-reveal {
+  font-size: clamp(28px, 7vw, 40px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.solution-explanation {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.65;
+  max-width: 420px;
+  margin: 0 auto 28px;
+}
+
+.next-prompt {
+  font-size: 14px;
+  color: var(--gray-400);
+  margin-top: 8px;
+}
+
+/* === Fortune overlay === */
+.fortune-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+  animation: fade-in 0.25s ease;
+}
+
+.fortune-overlay.hidden { display: none; }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fortune-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 36px 32px 28px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+  animation: slide-up 0.3s ease;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.fortune-cookie-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.fortune-text {
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 28px;
+}
+
+.fortune-close {
+  background: none;
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 13px;
+  color: var(--gray-600);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: border-color 0.15s;
+}
+
+.fortune-close:hover { border-color: var(--gray-400); }
+
+/* === Utilities === */
+.hidden { display: none !important; }
+
+/* === Responsive === */
+@media (max-width: 420px) {
+  .answer-area { flex-direction: column; }
+  .submit-btn { width: 100%; height: 48px; }
+}

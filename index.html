@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disogi — Daily Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="wordmark">DISOGI</div>
+    </header>
+
+    <main id="game-area">
+      <!-- Loading state -->
+      <div id="state-loading" class="state active">
+        <p class="loading-text">loading today's challenge…</p>
+      </div>
+
+      <!-- Error state -->
+      <div id="state-error" class="state">
+        <p class="error-message" id="error-message">Something went wrong.</p>
+        <p class="error-sub">Check that you're using the link from your newsletter.</p>
+      </div>
+
+      <!-- Puzzle state -->
+      <div id="state-puzzle" class="state">
+        <div class="puzzle-meta">
+          <span id="puzzle-type-badge" class="type-badge"></span>
+        </div>
+        <h1 id="puzzle-title" class="puzzle-title"></h1>
+        <p id="flavor-text" class="flavor-text"></p>
+        <div id="puzzle-question" class="puzzle-question"></div>
+
+        <div id="answer-area" class="answer-area">
+          <input
+            type="text"
+            id="answer-input"
+            class="answer-input"
+            placeholder="your answer…"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          >
+          <button id="submit-btn" class="submit-btn">Submit</button>
+        </div>
+
+        <div id="wrong-feedback" class="wrong-feedback hidden">Not quite — try again.</div>
+
+        <div id="hint-area" class="hint-area">
+          <button id="hint-btn" class="hint-btn">Need a hint?</button>
+          <div id="hint-display" class="hint-display hidden"></div>
+          <span id="hint-count" class="hint-count"></span>
+        </div>
+      </div>
+
+      <!-- Success state -->
+      <div id="state-success" class="state">
+        <div class="success-icon">✓</div>
+        <p class="success-label">you got it</p>
+        <div id="answer-reveal" class="answer-reveal"></div>
+        <div id="solution-explanation" class="solution-explanation"></div>
+        <p class="next-prompt" id="next-prompt"></p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Fortune modal -->
+  <div id="fortune-overlay" class="fortune-overlay hidden" role="dialog" aria-modal="true">
+    <div id="fortune-card" class="fortune-card">
+      <div class="fortune-cookie-icon">🥠</div>
+      <p id="fortune-text" class="fortune-text"></p>
+      <button id="fortune-close" class="fortune-close">close</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
