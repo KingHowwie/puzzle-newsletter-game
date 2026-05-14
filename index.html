@@ -28,6 +28,7 @@
       <div id="state-puzzle" class="state">
         <div class="puzzle-meta">
           <span id="puzzle-type-badge" class="type-badge"></span>
+          <span id="timer" class="timer">0:00</span>
         </div>
         <h1 id="puzzle-title" class="puzzle-title"></h1>
         <p id="flavor-text" class="flavor-text"></p>
@@ -61,7 +62,42 @@
         <div class="success-icon">✓</div>
         <p class="success-label">you got it</p>
         <div id="answer-reveal" class="answer-reveal"></div>
+        <p class="solve-time-line">solved in <strong id="solve-time-display"></strong></p>
         <div id="solution-explanation" class="solution-explanation"></div>
+
+        <div class="success-divider"></div>
+
+        <!-- Name submission form -->
+        <div id="name-form-area" class="name-form-area">
+          <p class="name-form-label">add yourself to the leaderboard?</p>
+          <div class="name-form-row">
+            <input
+              type="text"
+              id="name-input"
+              class="name-input"
+              maxlength="30"
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button id="name-submit-btn" class="name-submit-btn">Post</button>
+          </div>
+          <button id="name-skip-btn" class="name-skip-btn">skip</button>
+        </div>
+
+        <!-- Leaderboard (shown after posting or skipping) -->
+        <div id="leaderboard-area" class="leaderboard-area hidden">
+          <div class="leaderboard-tabs">
+            <button class="lb-tab active" data-tab="fastest">Fastest</button>
+            <button class="lb-tab" data-tab="first">First Finishers</button>
+          </div>
+          <div id="lb-fastest" class="lb-panel">
+            <div id="lb-fastest-list" class="lb-list"></div>
+          </div>
+          <div id="lb-first" class="lb-panel hidden">
+            <div id="lb-first-list" class="lb-list"></div>
+          </div>
+        </div>
+
         <p class="next-prompt" id="next-prompt"></p>
       </div>
     </main>

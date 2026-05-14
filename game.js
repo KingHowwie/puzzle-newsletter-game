@@ -1,11 +1,18 @@
 (function () {
   'use strict';
 
+  // ── Supabase config (fill in after Supabase setup) ─────────────────────────
+  const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+  const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
   // ── State ──────────────────────────────────────────────────────────────────
   let puzzle = null;
   let fortunes = [];
   let hintsUsed = 0;
   let solved = false;
+  let timerInterval = null;
+  let elapsedSeconds = 0;
+  let submittedName = null;
 
   // ── DOM refs ───────────────────────────────────────────────────────────────
   const $ = id => document.getElementById(id);
@@ -17,7 +24,7 @@
     success: $('state-success'),
   };
 
-  // ── Helpers ────────────────────────────────────────────────────────────────
+  // ── State management ───────────────────────────────────────────────────────
   function showState(name) {
     Object.values(states).forEach(el => el.classList.remove('active'));
     if (states[name]) states[name].classList.add('active');
@@ -28,37 +35,133 @@
     showState('error');
   }
 
+  // ── Helpers ────────────────────────────────────────────────────────────────
   function normalise(str) {
     return str.trim().toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ');
   }
 
-  function dayName(dateStr) {
-    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    const [y, m, d] = dateStr.split('-').map(Number);
-    return days[new Date(y, m - 1, d).getDay()];
+  function formatTime(seconds) {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${m}:${String(s).padStart(2, '0')}`;
   }
 
   function nextIssueDay(dateStr) {
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     const [y, m, d] = dateStr.split('-').map(Number);
     const dt = new Date(y, m - 1, d);
-    const day = dt.getDay(); // 0=Sun,1=Mon,3=Wed,5=Fri
-    // Issue days: Mon(1), Wed(3), Fri(5)
+    const day = dt.getDay();
     let daysAhead;
-    if (day === 1) daysAhead = 2; // Mon → Wed
-    else if (day === 3) daysAhead = 2; // Wed → Fri
-    else daysAhead = (8 - day) % 7 || 7; // Fri → Mon, or any other day → next Mon
+    if (day === 1) daysAhead = 2;
+    else if (day === 3) daysAhead = 2;
+    else daysAhead = (8 - day) % 7 || 7;
     const next = new Date(dt.getTime() + daysAhead * 86400000);
     return days[next.getDay()];
-    function days(n) {
-      return ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][n];
-    }
   }
 
-  // ── Fetch data ─────────────────────────────────────────────────────────────
+  // ── Timer ──────────────────────────────────────────────────────────────────
+  function startTimer() {
+    elapsedSeconds = 0;
+    $('timer').textContent = '0:00';
+    timerInterval = setInterval(() => {
+      elapsedSeconds++;
+      $('timer').textContent = formatTime(elapsedSeconds);
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+
+  // ── Fetch ──────────────────────────────────────────────────────────────────
   async function fetchJSON(path) {
     const r = await fetch(path + '?_=' + Date.now());
     if (!r.ok) throw new Error(`${r.status} fetching ${path}`);
     return r.json();
+  }
+
+  // ── Supabase helpers ───────────────────────────────────────────────────────
+  function supabaseHeaders() {
+    return {
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+      'Content-Type': 'application/json',
+    };
+  }
+
+  async function submitSolve(name) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/solvers`, {
+      method: 'POST',
+      headers: { ...supabaseHeaders(), 'Prefer': 'return=minimal' },
+      body: JSON.stringify({
+        puzzle_date: puzzle.date,
+        solver_name: name,
+        solve_time_seconds: elapsedSeconds,
+        hints_used: hintsUsed,
+      }),
+    });
+    if (!r.ok) throw new Error(`Supabase insert failed: ${r.status}`);
+  }
+
+  async function fetchLeaderboard() {
+    const r = await fetch(
+      `${SUPABASE_URL}/rest/v1/solvers?puzzle_date=eq.${puzzle.date}&select=solver_name,solve_time_seconds,hints_used,completed_at&order=completed_at.asc&limit=100`,
+      { headers: supabaseHeaders() }
+    );
+    if (!r.ok) throw new Error(`Supabase fetch failed: ${r.status}`);
+    return r.json();
+  }
+
+  // ── Render leaderboard ─────────────────────────────────────────────────────
+  function renderLeaderboard(rows) {
+    const fastest = [...rows].sort((a, b) => a.solve_time_seconds - b.solve_time_seconds).slice(0, 10);
+    const first   = rows.slice(0, 10);
+
+    renderList($('lb-fastest-list'), fastest, 'time');
+    renderList($('lb-first-list'),   first,   'time');
+
+    $('leaderboard-area').classList.remove('hidden');
+  }
+
+  function renderList(container, rows, _mode) {
+    if (!rows.length) {
+      container.innerHTML = '<p class="lb-empty">no entries yet</p>';
+      return;
+    }
+
+    container.innerHTML = rows.map((row, i) => {
+      const isMine = submittedName && row.solver_name === submittedName;
+      const hintText = row.hints_used === 0 ? 'no hints' : row.hints_used === 1 ? '1 hint' : `${row.hints_used} hints`;
+      return `
+        <div class="lb-row">
+          <span class="lb-rank">${i + 1}</span>
+          <span class="lb-name${isMine ? ' lb-mine' : ''}">${escHtml(row.solver_name)}</span>
+          <span class="lb-time">${formatTime(row.solve_time_seconds)}</span>
+          <span class="lb-hints">${hintText}</span>
+        </div>`;
+    }).join('');
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // ── Leaderboard flow ───────────────────────────────────────────────────────
+  async function showLeaderboard() {
+    $('name-form-area').classList.add('hidden');
+    const area = $('leaderboard-area');
+    area.classList.remove('hidden');
+    $('lb-fastest-list').innerHTML = '<p class="lb-empty">loading…</p>';
+    $('lb-first-list').innerHTML   = '<p class="lb-empty">loading…</p>';
+
+    try {
+      const rows = await fetchLeaderboard();
+      renderLeaderboard(rows);
+    } catch {
+      $('lb-fastest-list').innerHTML = '<p class="lb-error">leaderboard unavailable</p>';
+      $('lb-first-list').innerHTML   = '<p class="lb-error">leaderboard unavailable</p>';
+    }
   }
 
   // ── Render puzzle ──────────────────────────────────────────────────────────
@@ -69,9 +172,8 @@
     $('flavor-text').textContent = puzzle.flavor_text;
     $('puzzle-question').textContent = puzzle.question;
 
-    // Hint button wording
     updateHintButton();
-
+    startTimer();
     showState('puzzle');
     $('answer-input').focus();
   }
@@ -115,7 +217,6 @@
   }
 
   $('submit-btn').addEventListener('click', checkAnswer);
-
   $('answer-input').addEventListener('keydown', e => {
     if (e.key === 'Enter') checkAnswer();
   });
@@ -124,24 +225,62 @@
     const input = $('answer-input');
     $('wrong-feedback').classList.remove('hidden');
     input.classList.add('shake');
-    input.addEventListener('animationend', () => {
-      input.classList.remove('shake');
-    }, { once: true });
+    input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
     input.select();
   }
 
   function handleCorrect() {
     solved = true;
+    stopTimer();
+
     $('answer-reveal').textContent = puzzle.answer_display;
+    $('solve-time-display').textContent = formatTime(elapsedSeconds);
     $('solution-explanation').textContent = puzzle.solution_explanation;
 
     const nextDay = nextIssueDay(puzzle.date);
     $('next-prompt').textContent = `next Disogi drops ${nextDay} — see you in your inbox`;
 
-    showState('success');
+    // Pre-fill anonymous name
+    $('name-input').value = `Anonymous#${Math.floor(1000 + Math.random() * 9000)}`;
 
+    showState('success');
     setTimeout(() => showFortune(), 900);
   }
+
+  // ── Name form events ───────────────────────────────────────────────────────
+  $('name-submit-btn').addEventListener('click', async () => {
+    const name = $('name-input').value.trim();
+    if (!name) return;
+
+    const btn = $('name-submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Posting…';
+
+    submittedName = name;
+
+    try {
+      await submitSolve(name);
+    } catch {
+      // Still show leaderboard even if insert failed
+    }
+
+    await showLeaderboard();
+  });
+
+  $('name-skip-btn').addEventListener('click', () => {
+    showLeaderboard();
+  });
+
+  // ── Leaderboard tab switching ──────────────────────────────────────────────
+  document.querySelectorAll('.lb-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const which = tab.dataset.tab;
+      $('lb-fastest').classList.toggle('hidden', which !== 'fastest');
+      $('lb-first').classList.toggle('hidden',   which !== 'first');
+    });
+  });
 
   // ── Fortune modal ──────────────────────────────────────────────────────────
   function showFortune() {
@@ -156,15 +295,11 @@
   });
 
   $('fortune-overlay').addEventListener('click', e => {
-    if (e.target === $('fortune-overlay')) {
-      $('fortune-overlay').classList.add('hidden');
-    }
+    if (e.target === $('fortune-overlay')) $('fortune-overlay').classList.add('hidden');
   });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      $('fortune-overlay').classList.add('hidden');
-    }
+    if (e.key === 'Escape') $('fortune-overlay').classList.add('hidden');
   });
 
   // ── Init ───────────────────────────────────────────────────────────────────
@@ -177,14 +312,13 @@
       return;
     }
 
-    // Fetch puzzles and fortunes in parallel
     let puzzlesData, fortunesData;
     try {
       [puzzlesData, fortunesData] = await Promise.all([
         fetchJSON('puzzles.json'),
-        fetchJSON('fortunes.json').catch(() => ({ fortunes: [] }))
+        fetchJSON('fortunes.json').catch(() => ({ fortunes: [] })),
       ]);
-    } catch (err) {
+    } catch {
       showError('Could not load puzzle data. Try refreshing.');
       return;
     }
@@ -196,7 +330,6 @@
     }
 
     fortunes = fortunesData.fortunes || [];
-
     renderPuzzle();
   }
 
