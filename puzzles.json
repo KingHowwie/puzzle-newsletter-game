@@ -1,4 +1,20 @@
 {
-  "updated_at": "2026-05-10T00:00:00Z",
-  "puzzles": []
+  "updated_at": "2026-05-14T05:55:46.514449+00:00",
+  "puzzles": [
+    {
+      "date": "2026-05-18",
+      "puzzle_type": "word",
+      "title": "One Word, Four Lives",
+      "question": "I'm a platform where you post videos. I'm also what a creator \"goes\" when broadcasting live. I'm also a flowing body of water. And I'm also what you do to music or shows without downloading them. What single word am I?",
+      "answer": "stream",
+      "answer_display": "STREAM",
+      "hints": [
+        "Think about what Netflix, Spotify, and Twitch all have in common.",
+        "It's a word that existed long before the internet \u2014 you might find one in a forest.",
+        "A Twitch streamer literally does this word to fans watching this word of water."
+      ],
+      "flavor_text": "Some words just keep showing up everywhere \u2014 in the woods, on your phone, in your browser tab. This one has lived many lives.",
+      "solution_explanation": "The word STREAM satisfies all four clues: (1) a streaming platform (like Twitch, YouTube, Netflix), (2) going 'live' as in 'going live on stream,' (3) a natural stream of water, and (4) the act of streaming music or video content without downloading it. All four definitions point unambiguously to STREAM."
+    }
+  ]
 }
