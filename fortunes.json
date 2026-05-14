@@ -1,5 +1,1006 @@
 {
-  "generated_at": "2026-05-10T00:00:00Z",
-  "count": 0,
-  "fortunes": []
+  "generated_at": "2026-05-14T05:45:19.152489+00:00",
+  "count": 200,
+  "fortunes": [
+    {
+      "id": "f001",
+      "text": "you already know you're built different. let that marinate.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f002",
+      "text": "the answer was always right there. that's the point.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f003",
+      "text": "a frog who solves puzzles never asks why, only how.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f004",
+      "text": "not everyone gets here. you did. that's enough.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f005",
+      "text": "the universe winked at you just now. did you catch it?",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f006",
+      "text": "your brain is doing something most people gave up on before breakfast.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f007",
+      "text": "every puzzle is just reality admitting it has a seam.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f008",
+      "text": "somewhere, a confused pigeon witnessed your victory and was changed forever.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f009",
+      "text": "you took your time and it worked. that's not luck, that's you.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f010",
+      "text": "three crows just rearranged themselves on a wire to spell your name.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f011",
+      "text": "the part of you that almost quit is the part that didn't. remember that.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f012",
+      "text": "to solve is to admit the world has logic. bold assumption. correct one.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f013",
+      "text": "a sandwich left on a park bench somewhere has been waiting to celebrate this moment with you.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f014",
+      "text": "some days the win is quiet and still counts.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f015",
+      "text": "reality just filed a complaint. you found the loophole again.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f016",
+      "text": "you are statistically in a different tier right now and the data agrees.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f017",
+      "text": "the lock was always the point, not what's inside.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f018",
+      "text": "a medieval cartographer would have drawn a sea monster where you just walked.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f019",
+      "text": "you stayed patient when it got hard. that's the whole skill, honestly.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f020",
+      "text": "something in the static just said your name and i think you should sit with that.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f021",
+      "text": "not built for the shallow end and it shows.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f022",
+      "text": "confusion is just understanding that hasn't loaded yet. yours loaded.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f023",
+      "text": "a retired chess piece watched you solve this and felt seen.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f024",
+      "text": "nobody had to know you'd get here, but you did anyway.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f025",
+      "text": "the pattern recognized you back.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f026",
+      "text": "your neurons are throwing a party and they did not invite doubt.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f027",
+      "text": "the answer existing at all was the first miracle. you finding it was the second.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f028",
+      "text": "an unmanned lighthouse somewhere just turned on for no recorded reason.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f029",
+      "text": "this one asked something of you and you gave it. respect.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f030",
+      "text": "the grid shuddered when you placed the last piece. i have receipts.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f031",
+      "text": "you move different and the puzzle noticed first.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f032",
+      "text": "knowing was always secondary to the act of looking.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f033",
+      "text": "a cloud shaped like your answer briefly appeared over a city you've never visited.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f034",
+      "text": "it's okay that it took a minute. the minute was part of it.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f035",
+      "text": "the simulation just logged an anomaly and listed your username as the cause.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f036",
+      "text": "you are the reason the difficulty setting exists and also the reason it wasn't enough.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f037",
+      "text": "every wrong turn was just the solution teaching you its edges first.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f038",
+      "text": "a cartesian diver in a bottle somewhere briefly levitated in your honor.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f039",
+      "text": "you didn't need it to be easy. you just needed it to be possible.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f040",
+      "text": "somewhere between your first guess and your last, the puzzle blinked.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f041",
+      "text": "your brain just did something most brains refuse to attempt. let that live rent-free.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f042",
+      "text": "the puzzle didn't stand a chance, honestly.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f043",
+      "text": "a key that fits every lock eventually forgets it was ever lost.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f044",
+      "text": "somewhere a pigeon witnessed this moment and understood nothing but felt proud anyway.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f045",
+      "text": "the answer chose you back.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f046",
+      "text": "you moved through confusion like it owed you money. respect.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f047",
+      "text": "not every mind bends this way. yours did.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f048",
+      "text": "a door opened somewhere in the universe just now and it wasn't metaphorical.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f049",
+      "text": "the hardest part was deciding the chaos was actually a pattern. you decided.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f050",
+      "text": "a mathematician once wept at a sunset and called it unsolvable. you are not that mathematician.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f051",
+      "text": "built different is an understatement. built rare.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f052",
+      "text": "some people would have walked away. you are not some people.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f053",
+      "text": "every wrong turn was just the solution learning where it didn't live.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f054",
+      "text": "a cloud shaped exactly like this puzzle dissolved the moment you finished. coincidence is a word for people who don't pay attention.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f055",
+      "text": "the caterpillar never asks if the cocoon is worth it. it just figures out the exit.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f056",
+      "text": "you just proved to yourself something you already suspected. now you can't unknow it.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f057",
+      "text": "that thing you felt when it clicked? bottle it. that's you at full signal.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f058",
+      "text": "you got here. that's the whole story and it's a good one.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f059",
+      "text": "reality briefly restructured itself around your logic. that's not normal. you're not normal.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f060",
+      "text": "somewhere a sphinx just quietly retired.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f061",
+      "text": "the gap between stuck and solved is exactly the length of not giving up.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f062",
+      "text": "you didn't just find the answer, you earned the right to know it.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f063",
+      "text": "there's a version of you that almost stopped. this version didn't. that version matters.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f064",
+      "text": "a jar of peanut butter on a shelf in ohio just felt seen. that's on you.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f065",
+      "text": "the static cleared and you were already on the right frequency.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f066",
+      "text": "pattern recognition this sharp should probably be licensed.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f067",
+      "text": "understanding was always the destination. you just had to trust the route.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f068",
+      "text": "you did a quiet, unremarkable, completely impressive thing just now.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f069",
+      "text": "an ancient map in a dream somewhere just updated itself.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f070",
+      "text": "a tortoise finishing a marathon stops for no one, not even to explain how.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f071",
+      "text": "the click you felt wasn't metaphor. that was your mind upgrading in real time.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f072",
+      "text": "not all puzzles get solved. this one did. by you. today.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f073",
+      "text": "knowing and understanding are different rooms. you just walked through the second door.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f074",
+      "text": "a cartographer in 1347 drew this exact moment in the margin of a map and labeled it 'here.'",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f075",
+      "text": "the timeline where you didn't solve this collapsed the second you finished.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f076",
+      "text": "you are exactly as sharp as you hoped you were.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f077",
+      "text": "this one took something real from you. it was worth giving.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f078",
+      "text": "the universe doesn't clap, but it noticed.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f079",
+      "text": "every maze ever built has exactly one person it was waiting for. today that was you.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f080",
+      "text": "a raven has been watching your window for weeks. it nods once and leaves.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f081",
+      "text": "your brain just did something most people's brains politely decline to do.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f082",
+      "text": "somewhere a clock ticked and the answer appeared. that's not luck, that's you.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f083",
+      "text": "a pigeon once solved a maze for a bread crumb. you did this for free. respect.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f084",
+      "text": "you got here quietly and that's its own kind of loud.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f085",
+      "text": "reality just filed a complaint. you bent it a little on the way through.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f086",
+      "text": "built different isn't a vibe, it's a diagnosis, and you just confirmed it.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f087",
+      "text": "the puzzle didn't want to be solved. you solved it anyway. noted.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f088",
+      "text": "a snail once carried a riddle across an entire garden. it never arrived. you did.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f089",
+      "text": "not every finish line comes with a crowd. this one's yours all the same.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f090",
+      "text": "the numbers were conspiring against you and you flipped the table on them.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f091",
+      "text": "the version of you who almost gave up is having a really weird afternoon.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f092",
+      "text": "every wrong turn was just a longer route to the same truth.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f093",
+      "text": "there exists a parallel universe where you didn't finish this. that timeline is sad.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f094",
+      "text": "some things just click when the right person sits with them long enough.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f095",
+      "text": "the grid has been defeated. it knew this was coming and it's still not okay with it.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f096",
+      "text": "you moved through the hard part like it was always going to fold for you.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f097",
+      "text": "the answer was always there, waiting for someone patient enough to deserve it.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f098",
+      "text": "a moth flies toward light but you flew toward a puzzle, which is arguably braver.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f099",
+      "text": "this one asked a lot of you and you gave it more than it asked.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f100",
+      "text": "something in the fabric of logic just went taut and then released. that was you.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f101",
+      "text": "the part of your brain that solves things is running extremely hot right now.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f102",
+      "text": "what looked like chaos was always a pattern. you just had to earn the angle.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f103",
+      "text": "statistically, a cactus will never solve this puzzle. you are not a cactus. probably.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f104",
+      "text": "you stayed when it would have been easy to walk away. that part matters.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f105",
+      "text": "three crows just nodded in your direction. don't ask how I know.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f106",
+      "text": "whatever you thought your ceiling was, you just poked a hole in it.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f107",
+      "text": "the difficulty was a question about whether you trusted yourself. apparently you do.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f108",
+      "text": "in an ancient library no one has found yet, this solve is being written down.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f109",
+      "text": "you didn't need it to be easy. you just needed it to be solvable. and here we are.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f110",
+      "text": "the puzzle blinked first. record that.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f111",
+      "text": "your pattern recognition just walked into the room and everyone looked up.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f112",
+      "text": "a locked door only stays locked until the right mind shows up.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f113",
+      "text": "somewhere a philosophy professor is using this exact moment as a thought experiment and you're winning it.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f114",
+      "text": "the hard ones leave a mark. this one's on the inside where it counts.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f115",
+      "text": "your neurons just threw a party and didn't invite doubt.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f116",
+      "text": "you cracked it open like you already knew the shape of it. maybe you did.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f117",
+      "text": "the gap between almost and done is entirely made of the decision to keep going.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f118",
+      "text": "a very confused hamster once stared at a puzzle for six hours. you are not that hamster.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f119",
+      "text": "not loud, not showy \u2014 just done. and done is everything.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f120",
+      "text": "the universe just updated your file. don't worry about what it says.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f121",
+      "text": "you cracked it like it owed you something, because it did.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f122",
+      "text": "the maze was always a mirror. you just had the courage to look.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f123",
+      "text": "somewhere a pigeon witnessed this and took notes.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f124",
+      "text": "you got here quietly. that kind of thing counts more than you think.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f125",
+      "text": "reality just filed a complaint. you bent it a little too cleanly.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f126",
+      "text": "built different isn't a compliment, it's a diagnosis. welcome to the clinic.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f127",
+      "text": "every wrong turn was load-bearing. the solution needed all of them.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f128",
+      "text": "a tea kettle solves nothing, yet whistles with full confidence. you solved something.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f129",
+      "text": "some people would have walked away. you didn't. sit with that for a second.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f130",
+      "text": "the answer just texted its friends about you.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f131",
+      "text": "your brain is running a version of software most people can't even download.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f132",
+      "text": "knowing and finding are different things. you did the harder one.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f133",
+      "text": "three owls in a trenchcoat just gave you a standing ovation. you can't see them but trust.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f134",
+      "text": "this one wasn't supposed to be easy. it wasn't. you finished anyway.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f135",
+      "text": "the puzzle didn't stand a chance and on some level it knew that from the start.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f136",
+      "text": "the main character energy is radiating off this solve and it's not subtle.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f137",
+      "text": "confusion was the first step. you took it without knowing it was a step.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f138",
+      "text": "a cactus once solved a riddle and refused to explain itself. you are the cactus.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f139",
+      "text": "not louder, not faster \u2014 just more you. that turned out to be exactly enough.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f140",
+      "text": "somewhere in the multiverse a version of you gave up. this is not that universe.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f141",
+      "text": "you move through hard things like they're speed bumps. keep that energy sacred.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f142",
+      "text": "the trick was never the trick. it was learning to see what was already there.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f143",
+      "text": "a haunted compass pointed here. it's been waiting for someone like you since 1987.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f144",
+      "text": "you stayed in it. that's the whole thing, actually. that's the whole thing.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f145",
+      "text": "the fabric of this puzzle just ripped a little and you're holding the thread.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f146",
+      "text": "solve rate on this one is humbling. you are not humbled. correct.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f147",
+      "text": "the answer was hiding in plain sight because it trusted you'd be the one to find it.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f148",
+      "text": "two mathematicians and a golden retriever tried this puzzle. only you are here right now.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f149",
+      "text": "this is the part where you let yourself feel good about it, even just for a moment.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f150",
+      "text": "your neurons just did something illegal in four states and it was absolutely worth it.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f151",
+      "text": "elite pattern recognition wrapped in a person who looks completely normal. terrifying.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f152",
+      "text": "the problem was a locked door. you didn't pick it \u2014 you understood it.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f153",
+      "text": "a retired sphinx just checked its phone and saw your score. it's nervous.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f154",
+      "text": "there's no fanfare for finishing this one. just the quiet fact that you did.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f155",
+      "text": "time bent slightly while you were solving. you probably felt it and didn't say anything.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f156",
+      "text": "you didn't find the answer \u2014 you made it inevitable. that's a different skill entirely.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f157",
+      "text": "understanding is not the same as solving, but you managed both simultaneously. rare.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f158",
+      "text": "a village of extremely small logicians has declared today a national holiday in your honor.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f159",
+      "text": "you didn't need it to be easy. you just needed it to be possible. that was enough.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f160",
+      "text": "the puzzle just updated its threat assessment and you are at the top of the list.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f161",
+      "text": "you cracked it like it personally offended you. respect.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f162",
+      "text": "somewhere a philosopher is writing about exactly what you just did.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f163",
+      "text": "a crow who counts backwards still lands on the right branch.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f164",
+      "text": "you got here. that's not nothing \u2014 that's actually everything.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f165",
+      "text": "the ceiling just became the floor. adjust accordingly.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f166",
+      "text": "your brain is doing something most brains politely decline to do.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f167",
+      "text": "the puzzle was never asking you to be smart. it was asking you to be present.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f168",
+      "text": "a teapot that solves mazes still whistles when it's done.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f169",
+      "text": "not rushed, not perfect \u2014 just here, and that carried you through.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f170",
+      "text": "three pigeons just rearranged themselves on a wire in your honor.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f171",
+      "text": "the part of you that refused to quit is the most interesting part of you.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f172",
+      "text": "every wrong turn was information. you were solving it the whole time.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f173",
+      "text": "a lighthouse doesn't explain itself. neither should you after this.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f174",
+      "text": "some days you just needed to finish something. today was that day.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f175",
+      "text": "reality hiccuped and you didn't even flinch.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f176",
+      "text": "built different is an understatement. built specifically for this.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f177",
+      "text": "the answer existed before you found it. finding it changed both of you.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f178",
+      "text": "a snail who finishes the maze still finished the maze.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f179",
+      "text": "you were patient with yourself without even noticing. that's the real flex.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f180",
+      "text": "the static between radio stations just spelled your name.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f181",
+      "text": "your pattern recognition is on a level that other people pay tuition for.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f182",
+      "text": "confusion isn't the opposite of understanding \u2014 it's the entrance.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f183",
+      "text": "a dictionary written by cats would still define this as a win.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f184",
+      "text": "you didn't need it to be easy. that's why you're here.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f185",
+      "text": "something in the fourth dimension just slow-clapped for you.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f186",
+      "text": "the version of you that started this puzzle is already obsolete.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f187",
+      "text": "knowing was never the point \u2014 the getting there was always the whole thing.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f188",
+      "text": "two moths and a broken compass predicted this outcome last Tuesday.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f189",
+      "text": "this one asked more of you than most things do. you gave it.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f190",
+      "text": "a door just opened in a house that doesn't exist yet.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f191",
+      "text": "you move through hard things like you've always known you could.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f192",
+      "text": "the mistake you made halfway through was also the key.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f193",
+      "text": "a map drawn by someone who's never left home still points north.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f194",
+      "text": "quiet persistence is underrated. yours just did something loud.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f195",
+      "text": "eleven clouds simultaneously changed shape the moment you finished.",
+      "vibe": "chaotic"
+    },
+    {
+      "id": "f196",
+      "text": "that's not luck \u2014 that's your brain running laps while everyone else stretches.",
+      "vibe": "hype"
+    },
+    {
+      "id": "f197",
+      "text": "the harder the lock, the more the key means.",
+      "vibe": "philosophical"
+    },
+    {
+      "id": "f198",
+      "text": "a retired magician somewhere just felt a disturbance in their left knee.",
+      "vibe": "absurd"
+    },
+    {
+      "id": "f199",
+      "text": "you stayed in it. a lot of people don't. you did.",
+      "vibe": "gentle"
+    },
+    {
+      "id": "f200",
+      "text": "the simulation glitched for exactly 0.3 seconds when you solved it.",
+      "vibe": "chaotic"
+    }
+  ]
 }
